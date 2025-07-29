@@ -1,0 +1,153 @@
+Net Ninja (MERN STACK Tutorial)
+
+//1. What is MERN stack 
+
+// 2. Express App setup
+
+> backend folder -> server.js 
+> -> cd backend -> npm init -y 
+> -> npm install express -> npm install -g nodemon (if already present don't install)
+> in package.json added  -> "dev": "nodemon server.js"
+> npm run dev
+> in backend folder adding file called .env
+  ->  adding PORT=4000 value in .env
+  -> npm install dotenv
+> added the PORT config() on server.js and passed process.env.PORT in app.listen(instead value 4000, ())
+> npm run dev
+> went Postman and checked API. MERN App -> FirstsetUp
+> added middleware on server.js
+
+// 3. Express Router & API Routes
+
+> worked on postman
+
+// 4. MongoDB Atlas & Mongoose
+> .env Mongo_URI = mongodb+srv://loshika:test1234@mernapp.d3lpbng.mongodb.net/?retryWrites=true&w=majority&appName=MERNapp
+> npm install mongoose  // connect to db in server.js and - adding listen for requests into the then() 
+
+// 5. Models and Schemas
+
+> Create an Folder Moodels and workout.js 
+> in workouts.js on POST a new workout modifications
+> in postman - MERN App/DBInteract/adding a workout
+
+// 6. Controllers (part-1)
+
+// 7. Controllers (part-2)
+
+// 8. MAking a React App
+
+> cd ..
+> npm create-react-app frontend
+> cd frontend
+> npm install react-router-dom 
+> and import BrowserRouter, Routes, Route in App.js
+> src  -> Pages folder -> Home.js
+
+// 9. Fetching data
+> open package.json in frontend and add "proxy": "http://localhost:4000"
+> and restart both the commands in seperate terminal 
+> backend: npm run dev
+> frontend: npm start
+
+// 10. new workout form
+
+// 11. Adding React Context
+
+> context folder -> WorkoutContext.js
+> hooks folder -> useWorkoutsContext.js
+
+// 12. deleting data
+
+// 13. handling error responses
+
+-> backend/controller/workoutController
+
+// 14 . finishing touches 
+> index html added a link near by title for delete icon
+> npm install date-fns in frontend
+
+
+
+
+
+
+// MERN Authentication Tutorial (Net Ninja)
+
+#1 - Intro & Starter Project : 
+
+#2 - User Routes, Controller & Model
+
+> backend/routes/user.js
+> backend/controllers/userController.js
+> backend/models/userModel.js
+
+#3 - Signing Up & Hashing Passwords
+
+> /backend/  npm install bcrypt
+
+#3 - Email & Password Validation
+
+>/backend/npm install validator
+
+#5 - JSON Web Tokens (theory)
+
+Header:  Contains the algorithm used for the JWT 
+Payload:  Contains non-sensitive user data (e.g. a user id) 
+Signature:  Used to verify the token by the server
+> Refer : JWT_Snaps1.png
+
+#6 - Signing Tokens
+
+>/backend/ npm install jsonwebtoken
+> userController .....
+> .env -> SECRET=ashokramamoorthynetninjaloshika // random string.
+> postman - JWT Folder
+
+#7 - Logging Users In
+
+#8 - React Auth Context ( /Frontend/)
+
+> frontend/context/AuthContext.js
+> frontend/hooks/useAuthContext.js
+
+ #9 - Login & Signup Forms
+
+> frontend/../pages/Signup.js 
+> frontend/../pages/Login.js 
+
+ #10 - Making a useSignup Hook
+
+ > frontend/hooks/useSignup.js  // 09:09
+
+ #11 - Making a useLogout Hook
+
+ > /hooks/useLogout.js
+
+
+#12 - Making a useLogin Hook
+
+> /hooks/useLogin.js
+
+
+#13 - Setting the Initial Auth Status
+
+#14 - Protecting API Routes
+
+> backend/middleware/requireAuth.js
+
+
+#15 - Making Authorized Requests
+
+#16 - Protecting React Routes
+
+#17 - Assigning Workouts to Users
+
+
+
+Today Covered Topics : 
+React Auth Context
+Making a useSignup Hook
+Protecting API Routes
+Making Authorized Requests
+Protecting React Routes
